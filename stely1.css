@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap");
+
+@font-face {
+  font-family: "IKEA Sans";
+  src: url("https://cdn.jsdelivr.net/gh/aaronsharon/fonts/IkeaSansBold.woff2") format("woff2"),
+       url("https://cdn.jsdelivr.net/gh/aaronsharon/fonts/IkeaSansBold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: grid;
+  grid-template-columns: 70% 30%;
+  height: 100vh;
+  gap: 0.5em;
+}
+
+.main-section {
+  display: grid;
+  place-items: center;
+  text-align: center;
+  background-image: url("https://images.unsplash.com/photo-1694875546238-67cb3596adf1?q=80&w=1336&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3FDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  background-position: center;
+}
+
+.content {
+  display: grid;
+  gap: 20px;
+  text-align: center;
+}
+
+.logo {
+  font-size: 180px;
+  font-weight: bold;
+  font-family: "IKEA Sans", sans-serif;
+  color: rgb(249, 249, 0);
+  text-shadow: 1px 1px 0 #000;
+  margin-bottom: 200px;
+}
+
+.shop-button {
+  background: linear-gradient(to right, rgb(231, 231, 27) 40%, #f0f0719d 60%);
+  border: none;
+  padding: 5px 30px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 25px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  position: relative;
+  width: 250px;
+}
+
+.shop-text-left {
+  background: rgb(231, 231, 10);
+  padding: 10px 15px;
+  border-radius: 30px 0 0 30px;
+  font-weight: bold;
+}
+
+.shop-text-right {
+  padding: 10px 15px;
+  border-radius: 0 30px 30px 0;
+  font-weight: bold;
+}
+
+.sidebar {
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  gap: 0.5em;
+}
+
+.sidebar-item {
+  position: relative;
+  display: grid;
+  background-size: cover;
+  background-position: center;
+}
+
+.ikea-today {
+  background-image: url("https://images.unsplash.com/photo-1642666270427-375abc58f7d7?q=80&w=1975&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  background-position: bottom;
+}
+
+.about-ikea {
+  background-image: url("https://images.unsplash.com/photo-1628752660419-ad1c751abe72?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-position: bottom;
+}
+
+.ikea-museum {
+  background-image: url("https://images.unsplash.com/photo-1694875522449-e852b63be76d?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+}
+
+.ikea-2022 {
+  background-image: url("https://images.unsplash.com/photo-1613223968777-9a59c6f8c4de?q=80&w=1934&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+}
+
+.sidebar span {
+  position: absolute;
+  font-weight: bold;
+  top: 10px;
+  left: 10px;
+  color: rgb(249, 249, 249);
+  padding: 10px 10px;
+  font-size: 14px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
+}
+
+.subtitle {
+  color: rgb(252, 252, 252);
+  font-size: 34px;
+  font-weight: bold;
+  /*padding: px;*/
+}
+
+.arrow-icon {
+  color: rgb(255, 255, 255);
+  margin-right: 14em;
+ /* margin-top: 1em;*/
+  font-size: 2em;
+}
+
+.logo sup {
+  font-size: 40px;
+  position: relative;
+  top: -60px;
+  left: -30px;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+  }
+  .main-section {
+    grid-row: 1;
+    min-height: 600px;
+  }
+  .sidebar {
+    grid-row: 2 / span 4;
+    display: grid;
+    grid-template-rows: repeat(4, 200px);
+  }
+  .logo {
+    font-size: 100px;
+  }
+
+  .logo sup {
+    font-size: 30px;
+    top: -35px;
+    left: -15px;
+  }
+
+  .subtitle {
+    font-size: 18px;
+  }
+
+  .shop-button {
+    padding: 12px 24px;
+    font-size: 16px;
+  }
+  .arrow-icon {
+    color: white;
+    margin-right: 12em;
+    font-size: larger;
+  }
+}
+ 
